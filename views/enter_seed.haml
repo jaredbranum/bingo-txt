@@ -1,0 +1,9 @@
+!!! 5
+%html
+  %head
+    %title Bingo to Txt
+  %body
+    %form{:method => "get", :action => "scraper"}
+      Enter bingo seed:
+      %input{:type => "text", :name => "seed", :id => "seed"}
+      %input{:type => "submit", :value => "Submit"}

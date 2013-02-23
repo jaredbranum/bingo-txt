@@ -1,0 +1,58 @@
+!!! 5
+%html
+  %head
+    :javascript
+      var srl = {};
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "http://speedrunslive.com/scripts/seedrandom-min.js?#{@time}", :type => "text/javascript"}
+    %script{:src => "http://speedrunslive.com/tools/oot-bingo/generator.js?#{@time}", :type => "text/javascript"}
+    %script{:src => "http://speedrunslive.com/tools/oot-bingo/goallist.js?#{@time}", :type => "text/javascript"}
+    %script{:src => "/javascript/scraper.js", :type => "text/javascript"}
+  %body{:style => "display:none;"}
+    #results
+      %table#bingo
+        %tr
+          %td#tlbr.popout
+          %td#col1.popout
+          %td#col2.popout
+          %td#col3.popout
+          %td#col4.popout
+          %td#col5.popout
+        %tr
+          %td#row1.popout
+          %td#slot1.row1.col1.tlbr
+          %td#slot2.row1.col2
+          %td#slot3.row1.col3
+          %td#slot4.row1.col4
+          %td#slot5.row1.col5.bltr
+        %tr
+          %td#row2.popout
+          %td#slot6.row2.col1
+          %td#slot7.row2.col2.tlbr
+          %td#slot8.row2.col3
+          %td#slot9.row2.col4.bltr
+          %td#slot10.row2.col5
+        %tr
+          %td#row3.popout
+          %td#slot11.row3.col1
+          %td#slot12.row3.col2
+          %td#slot13.row3.col3.tlbr.bltr
+          %td#slot14.row3.col4
+          %td#slot15.row3.col5
+        %tr
+          %td#row4.popout
+          %td#slot16.row4.col1
+          %td#slot17.row4.col2.bltr
+          %td#slot18.row4.col3
+          %td#slot19.row4.col4.tlbr
+          %td#slot20.row4.col5
+        %tr
+          %td#row5.popout
+          %td#slot21.row5.col1.bltr
+          %td#slot22.row5.col2
+          %td#slot23.row5.col3
+          %td#slot24.row5.col4
+          %td#slot25.row5.col5.tlbr
+        %tr
+          %td#bltr.popout
+    %form#to-txt{:method => "post", :action => "card.txt"}
