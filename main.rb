@@ -14,7 +14,7 @@ get '/scraper' do
   haml :scraper
 end
 
-post '/card.txt' do
+get '/card.txt' do
   content_type :plaintext
   params[:items].join("\r\n")
 end
