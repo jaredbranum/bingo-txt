@@ -1,7 +1,4 @@
-require 'sinatra'
-require 'haml'
 require 'open-uri'
-require 'nokogiri'
 
 configure do
   mime_type :plaintext, 'text/plain'
