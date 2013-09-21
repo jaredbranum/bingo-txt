@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'haml'
+require 'open-uri'
+require 'nokogiri'
 
 configure do
   mime_type :plaintext, 'text/plain'
@@ -10,6 +12,10 @@ get '/' do
 end
 
 get '/scraper' do
+  @oot_bingo_url = 'http://speedrunslive.com/tools/oot-bingo/'
+  doc = Nokogiri::HTML(open(@oot_bingo_url))
+  @goallist_js = doc.css('script[src*="goallist"]').first[:src]
+  @generator_js = doc.css('script[src*="generator"]').first[:src]
   @time = Time.now.to_i
   haml :scraper
 end

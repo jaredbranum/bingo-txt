@@ -5,8 +5,8 @@
       var srl = {};
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
     %script{:src => "http://speedrunslive.com/scripts/seedrandom-min.js?#{@time}", :type => "text/javascript"}
-    %script{:src => "http://speedrunslive.com/tools/oot-bingo/generator_v7.1.js?#{@time}", :type => "text/javascript"}
-    %script{:src => "http://speedrunslive.com/tools/oot-bingo/goallist_v7.1.js?#{@time}", :type => "text/javascript"}
+    %script{:src => "#{@oot_bingo_url}#{@generator_js}?#{@time}", :type => "text/javascript"}
+    %script{:src => "#{@oot_bingo_url}#{@goallist_js}?#{@time}", :type => "text/javascript"}
     %script{:src => "/javascript/scraper.js", :type => "text/javascript"}
   %body{:style => "display:none;"}
     #results
